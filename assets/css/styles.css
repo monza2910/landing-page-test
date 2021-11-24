@@ -121,7 +121,6 @@ body.dark-theme{
 }
 
 /*========== Button Dark/Light ==========*/
-
 .change-theme{
   color: var(--title-color);
   font-size: 1.15rem;
@@ -138,6 +137,7 @@ body.dark-theme{
 Color changes in some parts of 
 the website, in dark theme 
 ==========*/
+
 .dark-theme .steps__bg,
 .dark-theme .questions{
   background-color: var(--first-color-dark);
@@ -190,7 +190,7 @@ the website, in dark theme
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  transition: .4s;
+  transition: .4s; /*For animation dark mode*/
 }
 
 /*=============== NAV ===============*/
@@ -205,7 +205,7 @@ the website, in dark theme
 .nav__toggle,
 .nav__close{
   color: var(--title-color);
-} 
+}
 
 .nav__logo{
   text-transform: uppercase;
@@ -232,7 +232,7 @@ the website, in dark theme
   cursor: pointer;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px){
   .nav__menu{
     position: fixed;
     background-color: var(--container-color);
@@ -240,13 +240,12 @@ the website, in dark theme
     height: 100%;
     top: 0;
     right: -100%;
-    box-shadow: -2px 0px 4px hsla(var(--hue), 24%, 15%, .1);
+    box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
     padding: 4rem 0 0 3rem;
     border-radius: 1rem 0 0 1rem;
     transition: .3s;
     z-index: var(--z-fixed);
   }
-
 }
 
 .nav__close{
@@ -261,9 +260,6 @@ the website, in dark theme
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-
-  /* display: grid;
-  row-gap: 30px; */
 }
 
 .nav__link{
@@ -308,7 +304,7 @@ the website, in dark theme
 }
 
 .home__container{
-  position: relative; 
+  position: relative;
   row-gap: 2rem;
 }
 
@@ -350,14 +346,14 @@ the website, in dark theme
   width: 1rem;
   height: 2px;
   background-color: var(--first-color);
-  right: -50%;
+  right: -45%;
   top: 50%;
-} 
+}
 
 .home__social-links{
   display: inline-flex;
   flex-direction: column;
-  row-gap: 0.25rem;
+  row-gap: .25rem;
 }
 
 .home__social-link{
@@ -378,7 +374,7 @@ the website, in dark theme
   padding: 1rem 1.75rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
-  transition: .3s;  
+  transition: .3s;
 }
 
 .button:hover{
@@ -407,6 +403,7 @@ the website, in dark theme
 .button--link:hover .button__icon{
   transform: translateX(.25rem);
 }
+
 /*=============== ABOUT ===============*/
 .about__container{
   row-gap: 2rem;
@@ -445,7 +442,7 @@ the website, in dark theme
 
 /*=============== STEPS ===============*/
 .steps__bg{
-  background-color:var(--first-color);
+  background-color: var(--first-color);
   padding: 3rem 2rem 2rem;
   border-radius: 1rem;
 }
@@ -467,18 +464,18 @@ the website, in dark theme
 
 .steps__card-number{
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--first-color-alt);
   color: #FFF;
   padding: .5rem .75rem;
   border-radius: .25rem;
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-5);
-  transition: .3s;  
+  transition: .3s;
 }
 
 .steps__card-title{
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5); 
+  margin-bottom: var(--mb-0-5);
 }
 
 .steps__card-description{
@@ -486,9 +483,8 @@ the website, in dark theme
 }
 
 .steps__card:hover .steps__card-number{
-  transform: translateY(.25rem);
+  transform: translateY(-.25rem);
 }
-
 
 /*=============== PRODUCTS ===============*/
 .product__description{
@@ -497,8 +493,8 @@ the website, in dark theme
 
 .product__container{
   padding: 3rem 0;
-  grid-template-columns: repeat(2,1fr);
-  gap: 2.5rem 3rem ;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 3rem;
 }
 
 .product__card{
@@ -516,7 +512,7 @@ the website, in dark theme
 
 .product__title,
 .product__price{
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
 }
@@ -529,7 +525,7 @@ the website, in dark theme
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color:var(--first-color);
+  background-color: var(--first-color);
   color: #FFF;
   padding: .25rem;
   border-radius: .35rem;
@@ -537,18 +533,23 @@ the website, in dark theme
 }
 
 .product__button:hover{
-  background-color:var(--first-color-alt);
+  background-color: var(--first-color-alt);
 }
 
 .product__circle{
   width: 90px;
   height: 90px;
-  background-color:var(--first-color-lighten);
+  background-color: var(--first-color-lighten);
   border-radius: 50%;
   position: absolute;
   top: 18%;
   left: 5%;
 }
+
+.product__card:hover .product__img{
+  transform: translateY(-.5rem);
+}
+
 /*=============== QUESTIONS ===============*/
 .questions{
   background-color: var(--first-color-lighten);
@@ -716,7 +717,6 @@ the website, in dark theme
   z-index: 10;
 }
 
-
 /*=============== FOOTER ===============*/
 .footer__container{
   row-gap: 3rem;
@@ -849,10 +849,9 @@ the website, in dark theme
   border-radius: .5rem;
 }
 
-
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width:320px){
+@media screen and (max-width: 320px){
   .container{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -876,8 +875,9 @@ the website, in dark theme
     grid-template-columns: .6fr;
     justify-content: center;
   }
-
 }
+
+/* For medium devices */
 @media screen and (min-width: 576px){
   .steps__container{
     grid-template-columns: repeat(2, 1fr);
@@ -1057,8 +1057,8 @@ the website, in dark theme
   .about__container{
     column-gap: 7rem;
   }
-  
+
   .scrollup{
     right: 3rem;
   }
-}   
+}
